@@ -9,10 +9,9 @@ var fs = require("fs");
 var commands = process.argv[2];
 var userSearch = process.argv.slice(3).join(" ");
 
-UserInputs(commands, userSearch);
+userInputs(commands, userSearch);
 
-
-function UserInputs(commands, userSearch) {
+function userInputs(commands, userSearch) {
     switch (commands) {
         case "concert-this":
             concertThis(userSearch);
@@ -89,7 +88,7 @@ function doWhatItSays() {
         }
 
         var dataArr = data.split(",");
-        UserInputs(dataArr[0], dataArr[1]);
+        userInputs(dataArr[0], dataArr[1]);
 
     })
 };
